@@ -1,0 +1,74 @@
+[
+  {
+    "Name": "Sun",
+    "Equatorial Diameter (km)": "1.3927",
+    "Mass (Earth=1)": "333,000",
+    "Rotation Period": "27d",
+    "Tilt (degrees)": "7.25",
+    "Distance from Sun (km)": "0"
+  },
+  {
+    "Name": "Mercury",
+    "Equatorial Diameter (km)": "4878",
+    "Mass (Earth=1)": "0.06",
+    "Rotation Period": "58.65d",
+    "Tilt (degrees)": "7",
+    "Distance from Sun (km)": "58m"
+  },
+  {
+    "Name": "Venus",
+    "Equatorial Diameter (km)": "12,100",
+    "Mass (Earth=1)": "0.82",
+    "Rotation Period": "243d",
+    "Tilt (degrees)": "177",
+    "Distance from Sun (km)": "108m"
+  },
+  {
+    "Name": "Earth",
+    "Equatorial Diameter (km)": "12,756",
+    "Mass (Earth=1)": "1",
+    "Rotation Period": "23.934h",
+    "Tilt (degrees)": "23",
+    "Distance from Sun (km)": "149.6m"
+  },
+  {
+    "Name": "Mars",
+    "Equatorial Diameter (km)": "6794",
+    "Mass (Earth=1)": "0.11",
+    "Rotation Period": "24.623h",
+    "Tilt (degrees)": "25",
+    "Distance from Sun (km)": "227.9m"
+  },
+  {
+    "Name": "Jupiter",
+    "Equatorial Diameter (km)": "142,800",
+    "Mass (Earth=1)": "317.89",
+    "Rotation Period": "9.842h",
+    "Tilt (degrees)": "3",
+    "Distance from Sun (km)": "778.3"
+  },
+  {
+    "Name": "Saturn",
+    "Equatorial Diameter (km)": "120,000",
+    "Mass (Earth=1)": "95.17",
+    "Rotation Period": "10.233h",
+    "Tilt (degrees)": "27",
+    "Distance from Sun (km)": "1.4b"
+  },
+  {
+    "Name": "Uranus",
+    "Equatorial Diameter (km)": "52,400",
+    "Mass (Earth=1)": "14.56",
+    "Rotation Period": "16-28h",
+    "Tilt (degrees)": "98",
+    "Distance from Sun (km)": "2.87b"
+  },
+  {
+    "Name": "Neptune",
+    "Equatorial Diameter (km)": "48,400",
+    "Mass (Earth=1)": "17.24",
+    "Rotation Period": "18-20h",
+    "Tilt (degrees)": "30",
+    "Distance from Sun (km)": "4.5b"
+  }
+]
