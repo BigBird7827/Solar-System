@@ -188,19 +188,24 @@
         camera.position.z = 15;
 
         if (planet.hasRings) {
-          textureLoader.load(planet.ringTexture, (ringTexture) => {
-            const ringGeometry = new THREE.RingGeometry(7, 10, 64);
-            const ringMaterial = new THREE.MeshBasicMaterial({
-              map: ringTexture,
-              side: THREE.DoubleSide,
-              transparent: true,
-            });
-            rings = new THREE.Mesh(ringGeometry, ringMaterial);
-            rings.rotation.x = Math.PI / 2;
-            rings.rotation.z = THREE.Math.degToRad(planet.tilt);
-            planetGroup.add(rings);
-          });
-        }
+  textureLoader.load(planet.ringTexture, (ringTexture) => {
+    const innerRadius = 5.5;
+    const outerRadius = 7.5;
+    const ringGeometry = new THREE.RingGeometry(innerRadius, outerRadius, 64);
+
+    const ringMaterial = new THREE.MeshBasicMaterial({
+      map: ringTexture,
+      side: THREE.DoubleSide,
+      transparent: true,
+    });
+
+    rings = new THREE.Mesh(ringGeometry, ringMaterial);
+    rings.rotation.x = Math.PI / 2;
+    rings.rotation.z = THREE.Math.degToRad(planet.tilt);
+    rings.position.set(0, 0, 0);
+    planetGroup.add(rings);
+  });
+}
 
         document.getElementById('planet-name').innerText = planet.name;
         document.getElementById('planet-data').innerHTML = `
