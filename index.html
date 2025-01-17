@@ -201,6 +201,7 @@
 
     rings = new THREE.Mesh(ringGeometry, ringMaterial);
     rings.rotation.x = Math.PI / 2;
+    rings.rotation.y = Math.PI / 2;
     rings.rotation.z = THREE.Math.degToRad(planet.tilt);
     rings.position.set(0, 0, 0);
     planetGroup.add(rings);
