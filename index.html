@@ -188,7 +188,7 @@
         camera.position.z = 15;
 
         if (planet.hasRings) {
-  textureLoader.load(planet.ringTexture, (ringTexture) => {
+  textureLoader.load('https://raw.githubusercontent.com/BigBird7827/Solar-System/refs/heads/main/Saturn%20Rings%20Texture%20(Alternate).jpg', (ringTexture) => {
     const innerRadius = 5.5;
     const outerRadius = 7.5;
     const ringGeometry = new THREE.RingGeometry(innerRadius, outerRadius, 64);
