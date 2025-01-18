@@ -164,47 +164,53 @@
 ];
 
     function loadPlanet(planetName) {
-      const planet = planetData.find(p => p.name.toLowerCase() === planetName.toLowerCase());
-      if (!planet) return;
+  const planet = planetData.find(p => p.name.toLowerCase() === planetName.toLowerCase());
+  if (!planet) return;
 
-      const textureLoader = new THREE.TextureLoader();
-      if (planetGroup) scene.remove(planetGroup);
-      if (rings) {
-        planetGroup.remove(rings);
-        rings = null;
-      }
+  const textureLoader = new THREE.TextureLoader();
+  if (planetGroup) scene.remove(planetGroup);
+  if (rings) {
+    scene.remove(rings);
+    rings = null;
+  }
 
-      textureLoader.load(planet.texture, (texture) => {
-        const geometry = new THREE.SphereGeometry(5, 64, 64);
-        const material = new THREE.MeshBasicMaterial({ map: texture });
-        const sphere = new THREE.Mesh(geometry, material);
-        sphere.scale.set(scale, scale, scale);
+  textureLoader.load(planet.texture, (texture) => {
+    const geometry = new THREE.SphereGeometry(5, 64, 64);
+    const material = new THREE.MeshBasicMaterial({ map: texture });
+    const sphere = new THREE.Mesh(geometry, material);
+    sphere.scale.set(scale, scale, scale);
 
-        planetGroup = new THREE.Group();
-        planetGroup.add(sphere);
-        planetGroup.rotation.z = THREE.Math.degToRad(planet.tilt);
+    planetGroup = new THREE.Group();
+    planetGroup.add(sphere);
+    planetGroup.rotation.z = THREE.Math.degToRad(planet.tilt);
 
-        scene.add(planetGroup);
-        camera.position.z = 15;
+    scene.add(planetGroup);
+    camera.position.z = 15;
 
-        if (planet.hasRings) {
-  textureLoader.load('https://raw.githubusercontent.com/BigBird7827/Solar-System/refs/heads/main/Saturn%20Rings%20Texture%20(Alternate).jpg', (ringTexture) => {
-    const innerRadius = 5.5;
-    const outerRadius = 7.5;
-    const ringGeometry = new THREE.RingGeometry(innerRadius, outerRadius, 64);
+    if (planet.hasRings) {
+      textureLoader.load('https://raw.githubusercontent.com/BigBird7827/Solar-System/refs/heads/main/Saturn%20Rings%20(Rotated).png', (ringTexture) => {
+        const ringGeometry = new THREE.RingGeometry(7, 10, 64);
+        const ringMaterial = new THREE.MeshBasicMaterial({
+          map: ringTexture,
+          side: THREE.DoubleSide,
+          transparent: true,
+        });
+        rings = new THREE.Mesh(ringGeometry, ringMaterial);
+        rings.rotation.x = Math.PI / 2;
+        rings.rotation.z = THREE.Math.degToRad(planet.tilt);
+        rings.position.set(0, 0, 0);
+        planetGroup.add(rings);
+      });
+    }
 
-    const ringMaterial = new THREE.MeshBasicMaterial({
-      map: ringTexture,
-      side: THREE.DoubleSide,
-      transparent: true,
-    });
-
-    rings = new THREE.Mesh(ringGeometry, ringMaterial);
-    rings.rotation.x = Math.PI / 2;
-    rings.rotation.y = Math.PI / 2;
-    rings.rotation.z = THREE.Math.degToRad(planet.tilt);
-    rings.position.set(0, 0, 0);
-    planetGroup.add(rings);
+    document.getElementById('planet-name').innerText = planet.name;
+    document.getElementById('planet-data').innerHTML = `
+      <li><strong>Diameter:</strong> ${planet.diameter}</li>
+      <li><strong>Mass:</strong> ${planet.mass}</li>
+      <li><strong>Rotation Period:</strong> ${planet.rotationSpeed > 0 ? 'Prograde' : 'Retrograde'}</li>
+      <li><strong>Tilt:</strong> ${planet.tilt}°</li>
+      <li><strong>Distance from Sun:</strong> ${planet.distance}</li>
+    `;
   });
 }
 
