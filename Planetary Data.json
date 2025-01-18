@@ -5,7 +5,8 @@
     "Mass (Earth=1)": "333,000",
     "Rotation Period": "27d",
     "Tilt (degrees)": "7.25",
-    "Distance from Sun (km)": "0"
+    "Distance from Sun (km)": "0",
+    "Orbital Speed (km/s)": "0"
   },
   {
     "Name": "Mercury",
@@ -13,7 +14,8 @@
     "Mass (Earth=1)": "0.06",
     "Rotation Period": "58.65d",
     "Tilt (degrees)": "7",
-    "Distance from Sun (km)": "58m"
+    "Distance from Sun (km)": "58m",
+    "Orbital Speed (km/s)": "47.87"
   },
   {
     "Name": "Venus",
@@ -21,7 +23,8 @@
     "Mass (Earth=1)": "0.82",
     "Rotation Period": "243d",
     "Tilt (degrees)": "177",
-    "Distance from Sun (km)": "108m"
+    "Distance from Sun (km)": "108m",
+    "Orbital Speed (km/s)": "35.02"
   },
   {
     "Name": "Earth",
@@ -29,7 +32,8 @@
     "Mass (Earth=1)": "1",
     "Rotation Period": "23.934h",
     "Tilt (degrees)": "23",
-    "Distance from Sun (km)": "149.6m"
+    "Distance from Sun (km)": "149.6m",
+    "Orbital Speed (km/s)": "29.78"
   },
   {
     "Name": "Mars",
@@ -37,7 +41,8 @@
     "Mass (Earth=1)": "0.11",
     "Rotation Period": "24.623h",
     "Tilt (degrees)": "25",
-    "Distance from Sun (km)": "227.9m"
+    "Distance from Sun (km)": "227.9m",
+    "Orbital Speed (km/s)": "24.07"
   },
   {
     "Name": "Jupiter",
@@ -45,7 +50,8 @@
     "Mass (Earth=1)": "317.89",
     "Rotation Period": "9.842h",
     "Tilt (degrees)": "3",
-    "Distance from Sun (km)": "778.3"
+    "Distance from Sun (km)": "778.3",
+    "Orbital Speed (km/s)": "13.07"
   },
   {
     "Name": "Saturn",
@@ -53,7 +59,8 @@
     "Mass (Earth=1)": "95.17",
     "Rotation Period": "10.233h",
     "Tilt (degrees)": "27",
-    "Distance from Sun (km)": "1.4b"
+    "Distance from Sun (km)": "1.4b",
+    "Orbital Speed (km/s)": "9.69"
   },
   {
     "Name": "Uranus",
@@ -61,7 +68,8 @@
     "Mass (Earth=1)": "14.56",
     "Rotation Period": "16-28h",
     "Tilt (degrees)": "98",
-    "Distance from Sun (km)": "2.87b"
+    "Distance from Sun (km)": "2.87b",
+    "Orbital Speed (km/s)": "6.81"
   },
   {
     "Name": "Neptune",
@@ -69,6 +77,7 @@
     "Mass (Earth=1)": "17.24",
     "Rotation Period": "18-20h",
     "Tilt (degrees)": "30",
-    "Distance from Sun (km)": "4.5b"
+    "Distance from Sun (km)": "4.5b",
+    "Orbital Speed (km/s)": "5.43"
   }
 ]
